@@ -1,0 +1,1 @@
+create poc @Configuration,@Primary,@Bean and @Lazy
