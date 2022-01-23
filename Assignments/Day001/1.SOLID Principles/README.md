@@ -14,3 +14,4 @@ The Principles are written out as follows:
 4) Interface Segregation Principle: No client should be forced to depend on methods that are not used within the client
    1) This means that properly principled coding should not create classes that depend on methods defined externally to successfully produce objects of said classes
 5) Dependency Inversion Principle: Modules built for a high level functionality (ie Super Models) should not depend on lower-level modules in order to function, but both should depend on Abstractions
+   1) This supports a better seperation of concerns, and allows classes with the same superclass to be used interchangeably
