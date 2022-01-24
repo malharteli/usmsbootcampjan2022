@@ -9,6 +9,5 @@ This maven project will be a multi-module proof of concept piece that will demon
    2. @Primary
    3. @Bean
    4. @Lazy
-2. Multi Module functionality
-3. Different POM files
-4. Surefire Reports
+   
+2. Surefire Reports - can be produced by running mvn surefire-report:report
