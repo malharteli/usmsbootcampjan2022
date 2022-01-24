@@ -1,0 +1,2 @@
+Create separate APIs for Customer and Currency
+Note: Currency will have image symbol
