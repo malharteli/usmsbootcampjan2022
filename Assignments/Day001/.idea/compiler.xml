@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="assignment1 (2)" />
+        <module name="assignment1.2" />
         <module name="assignment1" />
         <module name="assignment1 (1)" />
       </profile>
@@ -16,6 +16,7 @@
       <module name="assignment1" target="1.8" />
       <module name="assignment1 (1)" target="1.8" />
       <module name="assignment1 (2)" target="1.8" />
+      <module name="assignment1.2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -23,6 +24,7 @@
       <module name="assignment1" options="-parameters" />
       <module name="assignment1 (1)" options="-parameters" />
       <module name="assignment1 (2)" options="-parameters" />
+      <module name="assignment1.2" options="-parameters" />
     </option>
   </component>
 </project>
