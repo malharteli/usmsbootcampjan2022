@@ -3,9 +3,11 @@ package com.virtusatraining.assignment2.services;
 import com.virtusatraining.assignment2.models.Customer;
 import com.virtusatraining.assignment2.repositories.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CustomerService {
     @Autowired
     private CustomerRepo customerRepo;

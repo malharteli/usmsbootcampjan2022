@@ -19,6 +19,10 @@ public class Customer {
     private long creditLine;
     @Column(name="Email")
     private String email;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(foreignKey = @ForeignKey(name="Currency_Id"), name="Currency_Id")
+    private Currency currency;
+
 
 
 }

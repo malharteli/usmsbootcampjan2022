@@ -12,7 +12,7 @@ public class FullName {
     private String firstName;
     @Column(name="Last_Name", length = 50, nullable = false)
     private String lastName;
-    @Column(name="Middle_Name", length = 50, nullable = true)
+    @Column(name="Middle_Name", length = 50)
     private String middleName;
 
 }

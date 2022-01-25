@@ -3,9 +3,11 @@ package com.virtusatraining.assignment2.services;
 import com.virtusatraining.assignment2.models.Currency;
 import com.virtusatraining.assignment2.repositories.CurrencyRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CurrencyService {
     @Autowired
     private CurrencyRepo currencyRepo;
@@ -26,6 +28,15 @@ public class CurrencyService {
             status=true;
         }
         return status;
+    }
+
+    //delete all
+    public boolean deleteAllCurrency(){
+        this.currencyRepo.deleteAll();
+        if(this.currencyRepo.findAll().isEmpty()){
+            return true;
+        }
+        return false;
     }
 
     //list all currencies
