@@ -1,0 +1,7 @@
+Q1.create API with all layers 
+1.Customer
+2.Currency
+3.Calendar
+
+Q2.POC to understand REDIS server for caching
+
