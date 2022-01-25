@@ -17,19 +17,18 @@ public class Assignment2Application {
 	// This is all devoted to testing the blob input functionality of the Currency model
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(Assignment2Application.class, args);
-		Assignment2Application app = new Assignment2Application();
-		CurrencyService currencyService = (CurrencyService) applicationContext.getBean("currencyService", CurrencyService.class);
+		CurrencyService currencyService = applicationContext.getBean("currencyService", CurrencyService.class);
+		currencyService.deleteAllCurrency();
 		Currency americanCurrency = new Currency("Lira","Greece","₤");
 		// Trying to include an image file
 		String fileName = "images/lira.png";
 		System.out.println("trying to get image as stream: " + fileName);
 		byte[] currencyImage = null;
 		Resource resource = new ClassPathResource(fileName);
-		InputStream is = null;
+		InputStream is;
 		try {
 			is = resource.getInputStream();
-			byte[] bdata = FileCopyUtils.copyToByteArray(is);
-			currencyImage =bdata;
+			currencyImage = FileCopyUtils.copyToByteArray(is);
 
 		} catch (IOException e) {
 			e.printStackTrace();
