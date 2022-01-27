@@ -1,0 +1,3 @@
+Customer and Calendar API
+
+Create Graphql mutation (create,update and delete) and Query (findall and find byid) 
