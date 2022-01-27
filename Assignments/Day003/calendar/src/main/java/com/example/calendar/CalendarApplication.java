@@ -1,13 +1,13 @@
-package com.example.customer;
+package com.example.calendar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CustomerApplication {
+public class CalendarApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerApplication.class, args);
+		SpringApplication.run(CalendarApplication.class, args);
 
 	}
 

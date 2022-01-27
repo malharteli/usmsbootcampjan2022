@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>customer</artifactId>
+	<artifactId>calendar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>customer</name>
-	<description>API for Customer database</description>
+	<name>calendar</name>
+	<description>API for Calendar database</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
