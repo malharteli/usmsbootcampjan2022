@@ -17,7 +17,7 @@ public class CalenderQueryResolver implements GraphQLQueryResolver {
         return this.calendarService.getAllCalendar();
     }
 
-    public Calendar findCalendarsById(long calendarId){
+    public Calendar findCalendarById(long calendarId){
         return this.calendarService.getCalendarById(calendarId);
     }
 

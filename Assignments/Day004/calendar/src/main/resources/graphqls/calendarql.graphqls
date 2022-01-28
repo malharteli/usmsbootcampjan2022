@@ -24,11 +24,12 @@ input CalendarInput{
 
 type Query {
     findAllCalendars:[Calendar]
-    findCalendarById(holidayId:ID):Calendar
+    findCalendarById(calendarId:ID):Calendar
 }
 
 Type Mutation{
     createCalendar(calendarInput:CalenderInput):Calendar
     updateCalendar(calendarId:ID, calendar:Calender):Calendar
-    deleteHoliday(calendarId:Long):Boolean
+    deleteCalendar(calendarId:ID):Boolean
+    deleteCalendar(calendarId:ID):Boolean
 }
