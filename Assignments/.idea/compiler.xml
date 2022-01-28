@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="calendar" />
+        <module name="assignment2" />
         <module name="customer" />
       </profile>
     </annotationProcessing>

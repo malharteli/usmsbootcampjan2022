@@ -36,6 +36,9 @@ input CustomerInput{
     city:String
     country:String
     zip:String
+    customerEmail:String
+    customerPhone:String
+    customerStatus:Boolean
 
 
 }

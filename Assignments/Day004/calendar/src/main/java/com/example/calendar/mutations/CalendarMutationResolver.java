@@ -20,4 +20,12 @@ public class CalendarMutationResolver implements GraphQLMutationResolver {
         Calendar calendarObj = new Calendar(0, calendarInput.getEvent(), calendarInput.getCategory(), LocalDate.parse(calendarInput.getHolidayDate()), countryObj);
         return this.calendarService.addCalendar(calendarObj);
     }
+
+    public Calendar updateCalendar(long calendarId, Calendar calendar){
+        return this.calendarService.updateCalendar(calendarId, calendar);
+    }
+
+    public Boolean deleteCalendar(long calendarId){
+        return this.calendarService.deleteCalendarById(calendarId);
+    }
 }

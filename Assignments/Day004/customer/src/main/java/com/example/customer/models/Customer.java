@@ -29,7 +29,7 @@ public class Customer {
     @Column(name="Customer_Status")
     private boolean status;
     //Desk Code
-    @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
-    @JoinColumn(foreignKey = @ForeignKey(name="Desk_Id"), name="Desk_Id", nullable=true)
-    private Desk desk;
+//    @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+//    @JoinColumn(foreignKey = @ForeignKey(name="Desk_Id"), name="Desk_Id", nullable=true)
+//    private Desk desk;
 }

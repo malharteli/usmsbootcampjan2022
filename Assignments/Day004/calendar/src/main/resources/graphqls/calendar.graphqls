@@ -24,9 +24,11 @@ input CalendarInput{
 
 type Query {
     findAllCalendars:[Calendar]
-    findCalendersByCountry(countryId:String):Calendar
+    findCalendarById(holidayId:ID):Calendar
 }
 
 Type Mutation{
     createCalendar(calendarInput:CalenderInput):Calendar
+    updateCalendar(calendarId:ID, calendar:Calender):Calendar
+    deleteHoliday(calendarId:Long):Boolean
 }
