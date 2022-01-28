@@ -1,0 +1,41 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Customer {
+    customerId: ID!
+    fullName: FullName
+    customerAddress: Address
+    customerEmail:String
+    customerPhone:String
+    customerStatus:Boolean
+
+
+}
+
+type FullName {
+    firstName: String
+    lastName: String
+    middleName: String
+}
+
+type Address{
+    streetAddress: String
+    city: String
+    state: String
+    country: String
+    zip: String
+}
+
+input CustomerInput{
+    firstName: String
+    lastName:String
+    middleName:String
+    streetAddress:String
+    city:String
+    country:String
+    zip:String
+
+
+}
