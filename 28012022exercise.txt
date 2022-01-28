@@ -1,0 +1,3 @@
+Complete Mutation for Currency, Calendar and Customer API
+Implement Caching in all the APIs
+Spring Cloud just identify the features
