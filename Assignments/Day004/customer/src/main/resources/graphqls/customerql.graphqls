@@ -6,10 +6,10 @@ schema {
 type Customer {
     customerId: ID!
     fullName: FullName
-    customerAddress: Address
-    customerEmail:String
-    customerPhone:String
-    customerStatus:Boolean
+    address: Address
+    email:String
+    phone:String
+    status:Boolean
 
 
 }
@@ -36,9 +36,21 @@ input CustomerInput{
     city:String
     country:String
     zip:String
-    customerEmail:String
-    customerPhone:String
-    customerStatus:Boolean
+    state:String
+    email:String
+    phone:String
+    status:Boolean
 
 
+}
+
+type Query{
+    findAllCustomers:[Customer]
+    findCustomerById(customerId: ID):Customer
+}
+
+type Mutation{
+    createCustomer(customerInput:CustomerInput):Customer
+    updateCustomer(customerId:ID, customerInput:CustomerInput):Customer
+    deleteCustomer(customerId:ID):Boolean
 }

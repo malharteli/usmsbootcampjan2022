@@ -1,12 +1,16 @@
 package com.example.customer.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name="Customer")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
     //CustomerId
     @Id
