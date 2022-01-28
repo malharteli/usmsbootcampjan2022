@@ -1,0 +1,10 @@
+Create the jar file
+Generate public and private key 
+keytool -genkey -alias server -keyalg RSA -keypass password -storepass password -keystore keystore.jks
+Export the certificate
+keytool -export -alias server -storepass password -file server.cer -keystore keystore.jks
+Generate signed jar
+jarsigner -keystore keystore.jks -signedjar signedjar.jar  invapidocker-0.0.1-SNAPSHOT.jar server
+Verify the signed jar
+jarsigner -verify signedjar.jar
+
