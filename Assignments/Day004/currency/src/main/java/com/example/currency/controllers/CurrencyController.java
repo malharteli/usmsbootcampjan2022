@@ -33,7 +33,7 @@ public class CurrencyController {
 
     //Get with Id
     @GetMapping(value = "/{currencyId}", params = "version=1.0")
-    public ResponseEntity<?> getCurrencyById(@PathVariable("currencyId") String currencyId){
+    public ResponseEntity<?> getCurrencyById(@PathVariable("currencyId") long currencyId){
         Currency currencyObj = this.currencyService.getCurrencyById(currencyId);
         if (currencyObj!=null)
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
@@ -43,7 +43,7 @@ public class CurrencyController {
 
     //Put
     @PutMapping(value = "/{currencyId}", params = "version=1.0")
-    public ResponseEntity<?> updateCurrency(@RequestParam("currencyId") String currencyId, @RequestBody Currency currency){
+    public ResponseEntity<?> updateCurrency(@RequestParam("currencyId") long currencyId, @RequestBody Currency currency){
         Currency currencyObj = this.currencyService.updateCurrency(currencyId, currency);
         if (currencyObj != null)
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
@@ -53,7 +53,7 @@ public class CurrencyController {
     }
     //Delete
     @DeleteMapping(value = "/{currencyId}", params = "version=1.0")
-    public ResponseEntity<?> deleteCurrency(@PathVariable("currencyId") String currencyId){
+    public ResponseEntity<?> deleteCurrency(@PathVariable("currencyId") long currencyId){
         boolean result = this.currencyService.deleteCurrencyById(currencyId);
         if (result) return ResponseEntity.ok("Successfully Deleted");
         else return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Currency not deleted/Not Found");

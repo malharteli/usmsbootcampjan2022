@@ -17,7 +17,7 @@ public class CurrencyService {
         return this.currencyRepo.save(currency);
     }
     //update
-    public Currency updateCurrency(String currencyId, Currency currency){
+    public Currency updateCurrency(long currencyId, Currency currency){
         Currency currencyObj = this.getCurrencyById(currencyId);
         if (currencyObj!=null){
 
@@ -30,11 +30,11 @@ public class CurrencyService {
         return this.currencyRepo.findAll();
     }
 
-    public Currency getCurrencyById(String currencyId){
+    public Currency getCurrencyById(long currencyId){
         return this.currencyRepo.findById(currencyId).orElse(null);
     }
 
-    public boolean deleteCurrencyById(String currencyId){
+    public boolean deleteCurrencyById(long currencyId){
         this.currencyRepo.deleteById(currencyId);
         return (this.getCurrencyById(currencyId)==null);
     }
