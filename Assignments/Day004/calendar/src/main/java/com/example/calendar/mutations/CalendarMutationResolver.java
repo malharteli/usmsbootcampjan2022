@@ -21,8 +21,15 @@ public class CalendarMutationResolver implements GraphQLMutationResolver {
         return this.calendarService.addCalendar(calendarObj);
     }
 
-    public Calendar updateCalendar(long calendarId, Calendar calendar){
-        return this.calendarService.updateCalendar(calendarId, calendar);
+    public Calendar updateCalendar(long calendarId, CalendarInput calendarInput){
+        this.calendarService.getCalendarById(calendarId);
+        Country countryObj = this.calendarService.getCountryByCode(calendarInput.getCountryCode());
+        if (countryObj==null){
+            countryObj = new Country(calendarInput.getCountryCode());
+            this.calendarService.addCountry(countryObj);
+        }
+        Calendar calendarObj = new Calendar(0, calendarInput.getEvent(), calendarInput.getCategory(),  LocalDate.parse(calendarInput.getHolidayDate()), countryObj);
+        return this.calendarService.updateCalendar(calendarId, calendarObj);
     }
 
     public Boolean deleteCalendar(long calendarId){

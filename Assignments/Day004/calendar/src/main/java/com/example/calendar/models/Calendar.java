@@ -32,7 +32,7 @@ public class Calendar {
     @Column(name = "Date_Holiday", nullable = false)
     private LocalDate holidayDate;
     // Description
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(foreignKey = @ForeignKey(name="Country_Code"), name="Country_Code")
     private Country country;
 }

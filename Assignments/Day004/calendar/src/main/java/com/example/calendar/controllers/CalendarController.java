@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/calendar")
+@RequestMapping("/calendars")
 public class CalendarController {
     @Autowired
     private CalendarService calendarService;
