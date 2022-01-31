@@ -1,0 +1,1 @@
+Singleton,factory, proxy , builder and observable -- Create POC
