@@ -1,0 +1,1 @@
+Implement External Configuration with Config Server, Vault and Cloud  Bus for CounterParty API, Currency API
