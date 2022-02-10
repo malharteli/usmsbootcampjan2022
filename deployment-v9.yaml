@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: traderdeploy
+  name: traderdeploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traderdeploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: traderdeploy
+    spec:
+      containers:
+      - image: eswaribala/vusmsjan2022:traderappv1
+        name: traderapp
+        resources: {}          
+        
+        env:
+            - name: MYSQL_URL
+              value: jdbc:mysql://mysql:3306/traderdb?useSSL=false
+      #imagePullSecrets:  
+      #- name: globalaks-key
+
+status: {}
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: traderservice
+  name: traderservice
+spec:
+    
+  ports:
+  - protocol: TCP
+    port: 7070
+    targetPort: 7070
+    name: http
+  - protocol: TCP
+    port: 443
+    targetPort: 443
+    name: https
+  selector:
+    app: traderdeploy
+  type: ClusterIP
+status:
+  loadBalancer: {}
