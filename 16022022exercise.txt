@@ -1,0 +1,1 @@
+Publish LIBOR market data using Kafka
