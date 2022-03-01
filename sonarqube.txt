@@ -1,0 +1,10 @@
+sonar.projectKey=invapidocker
+sonar.projectName=C:/Users/Balasubramaniam/.jenkins/workspace/invapidocker
+sonar.projectVersion=1.0
+sonar.login=admin
+sonar.password=admin
+sonar.exclusions=vendor/**, storage/**, resources/**
+sonar.language=java
+sonar.sources=C:/Users/Balasubramaniam/.jenkins/workspace/$JOB_NAME
+sonar.java.binaries=C:/Users/Balasubramaniam/.jenkins/workspace/$JOB_NAME/invapidocker
+sonar.sourceEncoding=UTF-8
